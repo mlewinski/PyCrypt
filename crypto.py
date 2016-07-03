@@ -1,12 +1,25 @@
 # -*- coding: utf-8 -*-
 from pycrypt import caesar
+from pycrypt import vigenere
+
+print("Caesar:")
+
+#message = input("Message : ")
+#key = int(input("Key : "))
+
+#ciphertext = caesar.Encrypt("abcdefghijklmnopqrstuwvxyz0123456789", message, key)
+
+#print(ciphertext)
+
+#print(caesar.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
+
+print("Vigenere:")
 
 message = input("Message : ")
-key = int(input("Key : "))
+key = input("Key : ")
 
-ciphertext = caesar.Encrypt("abcdefghijklmnopqrstuwvxyz0123456789", message, key)
+ciphertext = vigenere.Encrypt("abcdefghijklmnopqrstuwvxyz0123456789", message, key)
 
 print(ciphertext)
 
-print(caesar.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
-
+print(vigenere.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
