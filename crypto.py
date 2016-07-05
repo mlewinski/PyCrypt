@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from pycrypt import caesar
 from pycrypt import vigenere
+from pycrypt import railfence
 
 print("Caesar:")
 
@@ -13,13 +14,20 @@ print("Caesar:")
 
 #print(caesar.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
 
-print("Vigenere:")
+#print("Vigenere:")
+
+#message = input("Message : ")
+#key = input("Key : ")
+
+#ciphertext = vigenere.Encrypt("abcdefghijklmnopqrstuwvxyz0123456789", message, key)
+
+#print(ciphertext)
+
+#print(vigenere.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
 
 message = input("Message : ")
-key = input("Key : ")
+key = int(input("Key : "))
 
-ciphertext = vigenere.Encrypt("abcdefghijklmnopqrstuwvxyz0123456789", message, key)
+ciphertext = railfence.Encrypt(message, key)
 
 print(ciphertext)
-
-print(vigenere.Decrypt("abcdefghijklmnopqrstuwvxyz0123456789", ciphertext, key))
